@@ -1,0 +1,338 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>MCGH</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #fcfcfc;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .titulo {
+        margin-bottom: 20px;
+    }
+
+    .opciones p {
+        background: #4eb4f3;
+        display: inline-block;
+        padding: 12px;
+        color: #ffffff;
+        border-radius: 2px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .opciones p:hover {
+        background: #f3ca4e;
+    }
+
+    p.p1 {
+        margin-right: 20px;
+    }
+
+    p.p2 {
+        margin-left: 20px;
+    }
+
+    #si {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #515050;
+        width: 550px;
+        padding: 50px;
+        color: #ffffff;
+        display: none;
+        text-align: center;
+    }
+
+    #si img {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    #fondo-oscuro {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 9998;
+        display: none;
+    }
+
+    .corazon {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-image: url('corazon.png');
+        background-size: cover;
+        animation: caer 5s infinite linear;
+    }
+
+    @keyframes caer {
+        0% {
+            top: -30px;
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            top: 100%;
+            transform: rotate(360deg);
+            opacity: 0;
+        }
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".p1").hover(function() {
+        arriba = Math.random() * (window.innerHeight - 30);
+        abajo = Math.random() * (window.innerWidth - 30);
+        $(this).css("top", arriba);
+        $(this).css("left", abajo);
+    });
+});
+
+function dijoSi() {
+    $("#si").show();
+    $("#fondo-oscuro").show();
+    reproducirAudio();
+}
+
+function reproducirAudio() {
+    var audio = new Audio("locos.mp3");
+    audio.play();
+}
+
+$(document).on("click", function(event) {
+    var ventanaSi = $("#si");
+    var fondoOscuro = $("#fondo-oscuro");
+    if (event.target === fondoOscuro[0]) {
+        ventanaSi.hide();
+        fondoOscuro.hide();
+    }
+});
+
+function generarCorazones() {
+    for (var i = 0; i < 50; i++) {
+        var corazon = $("<div>").addClass("corazon");
+        corazon.css({
+            top: Math.random() * (window.innerHeight - 30),
+            left: Math.random() * (window.innerWidth - 30)
+        });
+        $("body").append(corazon);
+    }
+}
+
+$(document).ready(function() {
+    generarCorazones();
+});
+</script>
+<body>
+<div class="contenedor">
+    <div class="titulo">
+        <h1>¿QUIERES VIBRAR A MI MISMA FRECUENCIA?</h1>
+    </div>
+    <div class="opciones">
+        <p class="p1">NO</p>
+        <p onclick="dijoSi()" class="p2">SI</p>
+        <div id="si">
+            <img src="ella-yo.jpg">
+            <h2>Te amo y sé que haremos que dure mucho esto.</h2>
+        </div>
+    </div>
+</div>
+<div id="fondo-oscuro"></div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCGH</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        background: #fcfcfc;
+    }
+    
+    .contenedor {
+        margin: auto;
+        width: 900px;
+        margin-top: 300px;
+        text-align: center;
+    }
+    
+    .titulo {
+        margin-top: -20px;
+    }
+    
+    .opciones p {
+        background: #4eb4f3;
+        display: inline-block;
+        padding: 12px;
+        color: #ffffff;
+        border-radius: 2px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .opciones p:hover {
+        background: #f3ca4e;
+        display: inline-block;
+        padding: 12px;
+        color: #ffffff;
+        border-radius: 2px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    p.p1 {
+        position: absolute;
+        top: 400px;
+        left: 609px;
+        width: 100px;
+    }
+    
+    p.p2 {
+        position: absolute;
+        top: 400px;
+        left: 800px;
+        width: 100px;
+    }
+    
+    #si {
+        background: #515050;
+        position: absolute;
+        top: 122px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 550px;
+        color: #ffffff;
+        padding: 50px;
+        display: none;
+        z-index: 9999;
+        text-align: center;
+    }
+    
+    #si img {
+        width: 30%;
+    }
+    
+    #fondo-oscuro {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 9998;
+        display: none;
+    }
+
+    .corazon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        animation: caidaCorazon linear infinite;
+        z-index: 9999;
+    }
+    
+    @keyframes caidaCorazon {
+        0% {
+            top: -20px;
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            top: 100vh;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".p1").hover(function() {
+        arriba = Math.random() * (400 - 1) + 1;
+        abajo = Math.random() * (609 - 1) + 1;
+        $(this).css("top", arriba);
+        $(this).css("left", abajo);
+    });
+});
+
+function dijoSi() {
+    $("#si").show();
+    $("#fondo-oscuro").show();
+    reproducirAudio();
+    generarCorazones();
+}
+
+function reproducirAudio() {
+    var audio = new Audio("locos.mp3");
+    audio.play();
+}
+
+function generarCorazones() {
+    var cantidadCorazones = 20;
+    var contenedorCorazones = document.querySelector(".contenedor-corazones");
+    for (var i = 0; i < cantidadCorazones; i++) {
+        var corazon = document.createElement("div");
+        corazon.className = "corazon";
+        corazon.style.left = Math.random() * (window.innerWidth - 10) + "px";
+        corazon.style.animationDuration = Math.random() * 2 + 1 + "s";
+        contenedorCorazones.appendChild(corazon);
+    }
+}
+
+$(document).on("click", function(event) {
+    var ventanaSi = $("#si");
+    var fondoOscuro = $("#fondo-oscuro");
+    if (event.target === fondoOscuro[0]) {
+        ventanaSi.hide();
+        fondoOscuro.hide();
+    }
+});
+</script>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>¿QUIERES VIBRAR A MI MISMA FRECUENCIA?</h1>
+        </div>
+        <div class="opciones">
+            <p class="p1">NO</p>
+            <p onclick="dijoSi()" class="p2">SI</p>
+        </div>
+        <div id="si">
+            <img src="ella-yo.jpg">
+            <h2>Te amo y sé que haremos que dure mucho esto.</h2>
+        </div>
+    </div>
+    <div id="fondo-oscuro"></div>
+    <div class="contenedor-corazones"></div>
+</body>
+</html>
