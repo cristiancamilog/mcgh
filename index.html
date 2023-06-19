@@ -113,13 +113,10 @@ $(document).ready(function() {
 function dijoSi() {
     $("#si").show();
     $("#fondo-oscuro").show();
-    reproducirAudio();
+   
 }
 
-function reproducirAudio() {
-    var audio = new Audio("locos.mp3");
-    audio.play();
-}
+
 
 $(document).on("click", function(event) {
     var ventanaSi = $("#si");
